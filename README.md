@@ -26,8 +26,6 @@ Ensure the following dependencies are installed:
   - Servo motors (optional, for LiDAR adjustment)  
 - **Software**:  
   - Python (>=3.6)  
-  - Required Python libraries (see `requirements.txt`)  
-  - `libcamera-jpeg`  
 
 ## Running the Code  
 
