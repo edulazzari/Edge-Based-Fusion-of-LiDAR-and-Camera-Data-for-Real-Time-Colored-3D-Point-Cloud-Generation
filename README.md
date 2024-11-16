@@ -1,32 +1,39 @@
-# Edge-Based Fusion of LiDAR and Camera Data for Real-Time Colored 3D Point Cloud Generation  
+# Edge-Based Fusion of LiDAR and Camera Data for Real-Time Colored 3D Point Cloud Generation
 
-This repository contains the code and resources for the paper:  
+This repository contains the code and documentation for the paper:  
 **"Edge-Based Fusion of LiDAR and Camera Data for Real-Time Colored 3D Point Cloud Generation"**  
 
 ## Abstract  
-This project investigates the generation of detailed colored 3D point clouds using edge computing platforms. By integrating a 2D LiDAR sensor, a camera module, and a single-board computer, it captures and processes spatial and RGB data in real time.  
+This project demonstrates the feasibility of generating detailed colored 3D point clouds on edge computing platforms. By integrating a 2D LiDAR sensor, a camera module, and a single-board computer, this solution processes spatial and RGB data in real time.  
 
 Key challenges addressed include:  
-- Optimization of algorithms for edge devices.  
-- Accurate calibration for fusing spatial and color data.  
-- Real-time data processing within limited computational resources.  
+- Optimizing algorithms for edge devices.  
+- Accurate data fusion through calibration.  
+- Managing real-time data processing with constrained resources.  
 
-The approach ensures precise synchronization of spatial and color information while overcoming edge device limitations. Results demonstrate successful 3D reconstructions without relying on desktop infrastructure, enabling applications in robotics, virtual reality, and portable scanning systems.  
+The methodology achieves precise synchronization between spatial and color data. Experimental results show effective 3D reconstruction without reliance on traditional desktop infrastructure, advancing edge computing's capabilities in 3D modeling and mapping.  
 
 ## Features  
-- **Real-Time Processing**: Generates colored 3D point clouds on edge devices.  
-- **Lightweight Design**: Optimized for single-board computers.  
-- **Portable Solution**: Ideal for mobile and field applications.  
+- **Real-Time 3D Point Cloud Generation**: Combines LiDAR data and images for colored 3D point clouds.  
+- **Edge Device Optimization**: Designed to work efficiently on single-board computers.  
+- **Simplified Workflow**: All processing is consolidated in a single pipeline for ease of use.  
 
 ## Prerequisites  
-Ensure the following are installed on your edge computing platform:  
-- Python (>=3.6)  
-- Required Python libraries (`requirements.txt`)  
-- A 2D LiDAR sensor and a compatible camera module  
+Ensure the following dependencies are installed:  
+- **Hardware**:  
+  - 2D LiDAR sensor  
+  - Camera module compatible with `libcamera`  
+  - Servo motors (optional, for LiDAR adjustment)  
+- **Software**:  
+  - Python (>=3.6)  
+  - Required Python libraries (see `requirements.txt`)  
+  - `libcamera-jpeg`  
 
 ## Running the Code  
 
 1. **Clone the Repository**:  
    ```bash
-   git clone https://github.com/your-repo-name/Edge-Based-Fusion-of-LiDAR-and-Camera-Data-for-Real-Time-Colored-3D-Point-Cloud-Generation.git  
-   cd Edge-Based-Fusion-of-LiDAR-and-Camera-Data-for-Real-Time-Colored-3D-Point-Cloud-Generation  
+   git clone https://github.com/your-repo-name/Edge-Based-Fusion-of-LiDAR-and-Camera-Data.git  
+   cd Edge-Based-Fusion-of-LiDAR-and-Camera-Data  
+
+2. Run main2.sh
