@@ -33,5 +33,4 @@ Ensure the following dependencies are installed:
    ```bash
    git clone https://github.com/your-repo-name/Edge-Based-Fusion-of-LiDAR-and-Camera-Data.git  
    cd Edge-Based-Fusion-of-LiDAR-and-Camera-Data  
-
-2. Run main2.sh
+   ./main2.sh
