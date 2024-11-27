@@ -4,50 +4,50 @@ import busio
 import adafruit_adxl34x
 import math
 
-# Inicializar a comunicação I2C
+# Initiate I2C communication
 i2c = busio.I2C(board.SCL, board.SDA)
 
-# Inicializar o sensor ADXL345
+# Initiate ADXL345 sensor
 accelerometer = adafruit_adxl34x.ADXL345(i2c)
 
-# Função para calcular a inclinação em relação ao plano XZ
+# Function to calculate the tilt relative to the XZ plane.
 def calculate_inclination(x, z, calibration_offset):
     inclination = -(math.degrees(math.atan2(x, z)) - calibration_offset)
     return inclination
 
-# Defina o offset de calibração manualmente
+# Define the calibration offset manually.
 calibration_offset = 86.39
 
-# Número de amostras para calcular a média
+# Number of samples to calculate the average.
 num_samples = 100
 
-# Intervalo entre leituras em segundos (pode ser ajustado ou removido)
+# Interval between readings in seconds (can be adjusted or removed).
 sample_interval = 0.01
 
-# Caminho do arquivo de texto
-file_path = "/home/edu/angle.txt"
+# Path to the text file, change to your own directory.
+file_path = "/home/user/angle.txt"
 
 inclinations = []
 
-# Coletar num_samples amostras
+# Collect num_samples samples.
 for _ in range(num_samples):
-    # Ler os valores de aceleração
+    # Read accelerometer values
     x, y, z = accelerometer.acceleration
     
-    # Calcular a inclinação em relação ao plano XZ
+    # Calculate the tilt relative to the XZ plane.
     inclination = calculate_inclination(x, z, calibration_offset)
     
-    # Adicionar a inclinação à lista
+    # Add the tilt to the list.
     inclinations.append(inclination)
     
     if sample_interval > 0:
         time.sleep(sample_interval)
 
-# Calcular a média das inclinações
+# Calculate the average of the tilts.
 average_inclination = sum(inclinations) / num_samples
 
-# Escrever a média no arquivo txt
+# Write the average to the text file.
 with open(file_path, "w") as file:
     file.write(f"Average Inclination: {average_inclination:.2f}°\n")
 
-# O código agora termina a execução após salvar o valor no arquivo.
+# The code now ends execution after saving the value to the file.
