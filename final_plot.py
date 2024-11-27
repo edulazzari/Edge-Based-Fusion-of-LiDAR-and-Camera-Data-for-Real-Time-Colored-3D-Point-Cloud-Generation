@@ -17,15 +17,15 @@ def plotar_dados(dados):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     
-    # Separar coordenadas XYZ e valores RGB
+    # Separate XYZ coordinates and RGB values.
     xyz = dados[:, :3]
-    rgb = dados[:, 3:] / 255.0  # Normalizar valores RGB para o intervalo [0, 1]
+    rgb = dados[:, 3:] / 255.0  # Normalize RGB values to the range [0, 1].
     
-    # Plotar todos os pontos
+    # Plot all the points.
     ax.scatter(0, 0, 0, c='red', marker='o')
     ax.scatter(xyz[:, 0], xyz[:, 1], xyz[:, 2], c=rgb, edgecolors='none', marker='o', s=10)
     
-    # Definir limites dos eixos (ajustar conforme necessário)
+    # Set axis limits (adjust as needed).
     x_limits = (0, 2500)
     y_limits = (-1500, 1500)
     z_limits = (1000, -2500)
@@ -34,21 +34,21 @@ def plotar_dados(dados):
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
     
-    # Definir limites dos eixos
+    # Set axis limits.
     ax.set_xlim(x_limits)
     ax.set_ylim(y_limits)
     ax.set_zlim(z_limits)
     
-    # Definir elevação e azimute
+    # Set elevation and azimuth.
     ax.view_init(elev=10, azim=168)
     
     plt.show()
 
-# Caminho para a pasta onde os arquivos estão localizados
-pasta_dados = '/home/edu/plot_sala_12/'
+# Path to the folder where the files are located.
+pasta_dados = '/home/user/plot_sala_12/'
 
-# Carregar todos os dados dos arquivos .txt
+# Load all data from the .txt files.
 dados_todos = carregar_dados_arquivos(pasta_dados)
 
-# Plotar os dados
+# Plot the data.
 plotar_dados(dados_todos)
