@@ -73,7 +73,7 @@ Running the `main.sh` script will execute the following functions in sequence. D
 - Writes the calculated average inclination to a text file (/home/user/angle.txt).
 - The script finishes after saving the average inclination to the file.
 
-      python3 lidar_plot3.py
+      python3 lidar_plot.py
 - numpy and matplotlib are used for mathematical operations and plotting.
 - skimage.transform.resize is used to resize images.
 - re is used for regular expressions, and os handles file system operations.
