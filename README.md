@@ -19,11 +19,12 @@ The methodology achieves precise synchronization between spatial and color data.
 - **Simplified Workflow**: All processing is consolidated in a single pipeline for ease of use.  
 
 ## Prerequisites  
-Ensure the following dependencies are installed:  
 - **Hardware**:  
-  - 2D LiDAR sensor  
-  - Camera module compatible with `libcamera`  
-  - Servo motors (optional, for LiDAR adjustment)  
+  - 2D LiDAR sensor (used Slamtec RPLIDAR A1)
+  - Camera module compatible with `libcamera` (used rev 1.3 camera module)
+  - Servo motors (for LiDAR adjustment, used Mg996r)
+  - Accelerometer (used ADXL345)
+  - Single Board Computer (used Raspberry Pi 4)
 - **Software**:  
   - Python (>=3.6)  
 
