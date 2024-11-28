@@ -30,6 +30,8 @@ The methodology achieves precise synchronization between spatial and color data.
 
 ## Prototype
 ![Protótipo final](https://github.com/edulazzari/Edge-Based-Fusion-of-LiDAR-and-Camera-Data-for-Real-Time-Colored-3D-Point-Cloud-Generation/blob/main/Prototype/prototipo_final.png)
+<img src="https://raw.githubusercontent.com/edulazzari/Edge-Based-Fusion-of-LiDAR-and-Camera-Data-for-Real-Time-Colored-3D-Point-Cloud-Generation/main/Prototype/prototipo_final.png" alt="Protótipo final" width="500"/>
+
 
 ## Running the Code  
 
