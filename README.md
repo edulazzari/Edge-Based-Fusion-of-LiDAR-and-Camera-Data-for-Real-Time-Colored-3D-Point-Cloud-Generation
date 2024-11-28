@@ -129,7 +129,7 @@ Running the `main.sh` script will execute the following functions in sequence. D
    ```bash
    git clone https://github.com/your-repo-name/Edge-Based-Fusion-of-LiDAR-and-Camera-Data.git  
    cd Edge-Based-Fusion-of-LiDAR-and-Camera-Data  
-   ./main2.sh
+   ./main.sh
 
 
 
