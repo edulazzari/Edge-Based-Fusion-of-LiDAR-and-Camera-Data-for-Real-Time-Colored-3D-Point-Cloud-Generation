@@ -16,7 +16,7 @@ pwm.start(0)  # Initialize with a 0% duty cycle.
 
 def set_servo_angle(angle):
     # Calculate the duty cycle based on the angle.
-    duty = max(min(angle / 18 + 2, 12), 2)  # Limita entre 2% e 12%
+    duty = max(min(angle / 18 + 2, 12), 2)  # Limit between 2% and 12%
     GPIO.output(servo_pin, True)
     pwm.ChangeDutyCycle(duty)
     time.sleep(0.09)  # Adjust the time if necessary for smoother movements.
