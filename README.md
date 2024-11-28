@@ -20,14 +20,14 @@ The methodology achieves precise synchronization between spatial and color data.
 
 ## Prerequisites  
 - **Hardware**:  
-  - 2D LiDAR sensor (used Slamtec RPLIDAR A1)
-  - Camera module compatible with `libcamera` (used rev 1.3 camera module)
-  - Servo motors (for LiDAR adjustment, used Mg996r)
-  - Accelerometer (used ADXL345)
-  - Single Board Computer (used Raspberry Pi 4)
+  - 2D LiDAR sensor (recommend Slamtec RPLIDAR A1)
+  - Camera module compatible with `libcamera` (recommend rev 1.3 camera module)
+  - Servo motors (for LiDAR adjustment, recommend Mg996r)
+  - Accelerometer (recommend ADXL345)
+  - Single Board Computer (recommend Raspberry Pi 4)
 - **Software**:  
   - Python (>=3.6)
-  - Pi OS (recommended)
+  - Pi OS (recommend)
 
 ## Prototype Assembly Instructions
 The STL files for the prototype can be found in the prototype folder of this repository. Simply download the files and use a 3D printer for printing.
