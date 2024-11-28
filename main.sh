@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Number of repetitions
-# User input
+# User input, the present prototype only supports 25 moves each, starting from top or bottom
+# Make sure to position it at maximum or minimum
 NUM_REPETICOES=25
 
 # Loop to repeat the sequence of commands
@@ -10,7 +11,7 @@ do
     echo "Executing iteration $i of $NUM_REPETICOES"
 
     # Change directory
-    cd /home/edu/Desktop
+    cd /home/user/Desktop
 
     # Takes a photo and saves it as testando.jpg
     libcamera-jpeg -o testando.jpg --shutter 20000
@@ -28,6 +29,7 @@ do
 
     # Moves the LiDAR upwards or backwards
     # Uncomment the line you are using
+    # You can automate the code to run continuously, cycling between servo up and servo down
     # python3 servo_up.py
     # python3 servo_down.py
 
