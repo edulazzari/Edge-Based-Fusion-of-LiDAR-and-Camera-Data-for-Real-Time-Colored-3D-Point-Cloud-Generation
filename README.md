@@ -33,6 +33,7 @@ The methodology achieves precise synchronization between spatial and color data.
 The STL files for the prototype can be found in the prototype folder of this repository. Simply download the files and use a 3D printer for printing.
 The material used for printing is PLA 1.75mm filament, with a layer height of 0.2mm for optimal results.
 There is also a video of the mounting process.
+
 <img src="https://raw.githubusercontent.com/edulazzari/Edge-Based-Fusion-of-LiDAR-and-Camera-Data-for-Real-Time-Colored-3D-Point-Cloud-Generation/main/Prototype/prototipo_final.png" alt="Protótipo final" width="500"/>
 
 
