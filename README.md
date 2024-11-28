@@ -28,6 +28,9 @@ The methodology achieves precise synchronization between spatial and color data.
 - **Software**:  
   - Python (>=3.6)  
 
+## Prototype
+![Protótipo final](https://github.com/edulazzari/Edge-Based-Fusion-of-LiDAR-and-Camera-Data-for-Real-Time-Colored-3D-Point-Cloud-Generation/blob/main/Prototype/prototipo_final.png)
+
 ## Running the Code  
 
 1. **Clone the Repository**:  
