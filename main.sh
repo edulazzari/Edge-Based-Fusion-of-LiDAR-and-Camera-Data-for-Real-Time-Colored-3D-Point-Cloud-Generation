@@ -17,15 +17,15 @@ do
     libcamera-jpeg -o testando.jpg --shutter 20000
 
     # Executes a script to obtain LiDAR points
-    python3 log2.py
+    python3 log.py
 
     # Executes a script to get the accelerometer angle
     # The angle is saved to angle.txt
-    python3 acelerometer5.py
+    python3 acelerometer.py
 
     # Executes the main code that overlays the LiDAR points on the image
     # Generates .txt files for each execution, located in the plot folder
-    python3 lidar_plot3.py
+    python3 lidar_plot.py
 
     # Moves the LiDAR upwards or backwards
     # Uncomment the line you are using
