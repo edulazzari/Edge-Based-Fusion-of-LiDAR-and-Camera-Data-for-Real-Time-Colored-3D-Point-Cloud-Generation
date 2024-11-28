@@ -43,6 +43,9 @@ This command uses the libcamera tool to capture a JPEG image from a camera modul
 - -o testando.jpg: This option specifies the output file where the captured image will be saved.
 - --shutter 20000: This option controls the shutter speed of the camera. The value 20000 refers to the exposure time in microseconds (µs). So, in this case, the camera's shutter is open for 20 milliseconds (20000 µs). A longer shutter speed allows more light to reach the camera sensor, which can be useful in low-light environments but might also cause motion blur if the camera or subject moves. Adapt it according to the ambient light.
 
+      python3 log.py
+### testeasdsad
+
 ## Running the Code  
 
 1. **Clone the Repository**:  
