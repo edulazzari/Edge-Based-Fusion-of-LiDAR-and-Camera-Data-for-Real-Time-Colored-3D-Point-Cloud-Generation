@@ -26,7 +26,8 @@ The methodology achieves precise synchronization between spatial and color data.
   - Accelerometer (used ADXL345)
   - Single Board Computer (used Raspberry Pi 4)
 - **Software**:  
-  - Python (>=3.6)  
+  - Python (>=3.6)
+  - Pi OS (recommended)
 
 ## Prototype
 <img src="https://raw.githubusercontent.com/edulazzari/Edge-Based-Fusion-of-LiDAR-and-Camera-Data-for-Real-Time-Colored-3D-Point-Cloud-Generation/main/Prototype/prototipo_final.png" alt="Protótipo final" width="500"/>
