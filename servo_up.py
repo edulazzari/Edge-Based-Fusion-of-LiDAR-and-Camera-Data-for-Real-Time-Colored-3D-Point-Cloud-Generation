@@ -1,25 +1,25 @@
 import RPi.GPIO as GPIO
 import time
 
-# Configurações do pino do servo
+# Servo pin settings.
 servo_pin = 11  # GPIO pin 11
-angle_increment = 0  # Incremento de ângulo em graus
+angle_increment = 0  # Angle increment in degrees.
 
-# Configura o modo de numeração dos pinos
+# Set the pin numbering mode.
 GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False)  # Desativa os avisos
+GPIO.setwarnings(False)  # Disable warnings.
 GPIO.setup(servo_pin, GPIO.OUT)
 
-# Configura o PWM no pino do servo
-pwm = GPIO.PWM(servo_pin, 50)  # 50 Hz (20 ms de período)
-pwm.start(0)  # Inicializa com duty cycle 0%
+# Set up PWM on the servo pin.
+pwm = GPIO.PWM(servo_pin, 50)  # 50 Hz (20 ms period).
+pwm.start(0)  # Initialize with a 0% duty cycle.
 
 def set_servo_angle(angle):
-    # Calcula o duty cycle baseado no ângulo
+    # Calculate the duty cycle based on the angle.
     duty = max(min(angle / 18 + 2, 12), 2)  # Limita entre 2% e 12%
     GPIO.output(servo_pin, True)
     pwm.ChangeDutyCycle(duty)
-    time.sleep(0.09)  # Ajusta o tempo se necessário para movimentos mais sutis
+    time.sleep(0.09)  # Adjust the time if necessary for smoother movements.
     GPIO.output(servo_pin, False)
     pwm.ChangeDutyCycle(0)
 
@@ -39,12 +39,12 @@ try:
     current_angle = get_current_angle()
     new_angle = current_angle + angle_increment
     if new_angle > 180:
-        new_angle = 180  # Limita o ângulo a 180 graus
+        new_angle = 180  # Limit the angle to 180 degrees.
     set_servo_angle(new_angle)
     save_current_angle(new_angle)
     print(f"Movido para {new_angle} graus.")
 
 except KeyboardInterrupt:
-    # Para o PWM e limpa as configurações do GPIO
+    # Stop the PWM and clean up the GPIO settings.
     pwm.stop()
     GPIO.cleanup()
